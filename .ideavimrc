@@ -1,0 +1,78 @@
+let mapleader=','
+" Quit normal mode
+nnoremap <Space>q  :q<CR>
+nnoremap <Space>Q  :qa!<CR>
+" Move half page faster
+nnoremap <Space-d>  <C-d>
+nnoremap <Space-u>  <C-u>
+
+" Insert mode shortcut
+inoremap <C-h> <Left>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-l> <Right>
+inoremap <C-u> <Home>
+inoremap <C-o> <End>
+inoremap <C-d> <Delete>
+
+" Quit insert mode
+inoremap jj <Esc>
+inoremap JJ <Esc>
+
+" New line convenience
+inoremap <M-CR> <Esc>o
+" 快速选中单词
+noremap <Leader>w viw
+
+" Quit visual mode
+vnoremap v <Esc>
+
+" Move to the start of line
+nnoremap H ^
+
+" Move to the end of line
+nnoremap L $
+
+" Redo
+nnoremap U <C-r>
+
+" Yank to the end of line
+nnoremap Y y$
+
+" Window operation
+nnoremap <S-w> <C-W>c
+nnoremap <S-j> <C-W>j
+nnoremap <S-s> <C-W>k
+nnoremap <S-a> <C-W>h
+nnoremap <S-d> <C-W>l
+nnoremap <S-=> <C-W>=
+" split window 
+nnoremap <S-x> <C-W>s
+nnoremap <S-v> <C-W>v
+
+" Tab operation
+nnoremap <Space>l gt
+nnoremap <Space>h gT
+
+" go to class and declaration
+nnoremap ga :action GotoAction<CR>
+nnoremap gc :action GotoClass<CR>
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap gf :action GotoFile<CR>
+nnoremap gi :action GotoImplementation<CR>
+nnoremap gs :action GotoSymbol<CR>
+
+" generate
+nnoremap <leader>gt :action GenerateTestMethod<CR>
+nnoremap <leader>gs :action GenerateSetUpMethod<CR>
+nnoremap <leader>gG :action GenerateGetter<CR>
+nnoremap <leader>gS :action GenerateSetter<CR>
+nnoremap <leader>ga :action GenerateGetterAndSetter<CR>
+nnoremap <leader>ge :action GenerateEquals<CR>
+nnoremap <leader>gc :action GenerateConstructor<CR>
+nnoremap <leader>G :action Generate<CR>
+
+" built-in navigation to navigated items works better
+nnoremap <c-h> :action Back<cr>
+nnoremap <c-l> :action Forward<cr>
+
